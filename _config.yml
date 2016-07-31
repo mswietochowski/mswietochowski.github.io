@@ -18,4 +18,7 @@ github_username:  mswietochowski
 
 # Build settings
 markdown: kramdown
-excerpt_separator: "\r\n\r\n"
+excerpt_separator: <!--MORE-->
+
+#various
+dateformat: "%b %-d, %Y"

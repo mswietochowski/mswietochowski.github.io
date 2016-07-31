@@ -1,6 +1,7 @@
 ---
 title: Setting up Jekkyl in Docker on Windows
 layout: post
+comments: true
 ---
 
 As you may have noticed, I have started a blog (again). This time I decided to go
@@ -9,6 +10,7 @@ and why you might want to do it this way.
 
 If you're running different platform, you will find it useful too.
 
+<!--MORE-->
 
 ## What and why?
 
