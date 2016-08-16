@@ -1,11 +1,11 @@
 ---
-title: Setting up Jekkyl in Docker on Windows
+title: Setting up Jekyll in Docker on Windows
 layout: post
 comments: true
 ---
 
 As you may have noticed, I have started a blog (again). This time I decided to go
-with jekyll. In this article I'm explaining how to run jekyll on Windows using Docker
+with Jekyll. In this article I'm explaining how to run Jekyll on Windows using Docker
 and why you might want to do it this way.
 
 If you're running different platform, you will find it useful too.
@@ -20,19 +20,19 @@ you might ask. There are many answers, but for me it's simplicity, security and
 an opportunity to learn a popular tool.
 
 Jekyll is written in ruby and requires ruby to run. You can install ruby
-on your machine to play with jekyll and your site, but that's not the path I've chosen.
+on your machine to play with Jekyll and your site, but that's not the path I've chosen.
 I decided to go with Docker.
 
 ## Why Docker?
 
 Docker is a container platform, that allows you to run pieces of software in clean,
-isolated and consistent micro-environemnts. If you don't know what it is, you miss
+isolated and consistent microenvironments. If you don't know what it is, you miss
 a big time and I truly encourage you to check it out and get an opinion.
 
-I decided to run jekyll using Docker because that's a perfect solution to keep
+I decided to run Jekyll using Docker because that's a perfect solution to keep
 my machine clean. I don't have to install ruby on my box, I don't need to
 worry about dependencies and maybe ruby-versions in the future. I have a requirements
-that Dockers was created for and it would be uniwse not to take advantage of that.
+that Docker was created for and it would be unwise not to take advantage of that.
 Plus I've never used Docker before and it's always great to learn new things.
 
 ## Guide
@@ -42,10 +42,10 @@ Docker installed. You should get yourself a Docker installation to and I'm not
 explaining how - it's easy and cross-platform, so just follow the Docker's page
 and [get yourself a Docker installation](http://www.docker.com/products/overview).
 
-### Running jekyll
+### Running Jekyll
 
-I didn't know how to use jekyll before so I went to 
-[jekyll quickstart](https://jekyllrb.com/docs/quickstart/) and got myself
+I didn't know how to use Jekyll before so I went to 
+[Jekyll quick-start](https://jekyllrb.com/docs/quickstart/) and got myself
 up to date on the matter. The most important findings were:
 
 * requires ruby
@@ -53,10 +53,10 @@ up to date on the matter. The most important findings were:
 * I'd like to start with `jekyll new myblog`
 
 Since I didn't want to install ruby on my machine, I decided to use Docker.
-The first obvious thing was to google how to use jekyll in docker and
+The first obvious thing was to google how to use Jekyll in Docker and
 no wonder there already was an
 [article about this](https://github.com/jekyll/docker/wiki/Usage:-Running)
-on jekyll's wiki page.
+on Jekyll's wiki page.
 
 So let's try that. I'm using PowerShell console for all command line stuff.
 I'm also running native Docker, so my command to run is:
@@ -111,7 +111,7 @@ Docker it gets a little bit longer, because I need to prefix it with the
 ### Making that easy
 
 That's lengthy and I'm lazy, so I naturally want to shorten this. Little bit of
-googling more and I know I need to create a powershell function for this. To make
+googling more and I know I need to create a PowerShell function for this. To make
 it available for me always I add it to my PowerShell_profile.ps1, which get's loaded
 every time I open console (make sure that your execution policy allows for that).
 The file is located here:
@@ -126,9 +126,9 @@ function jekyll{
 
 {% endhighlight %}
 
-This will create powershell function `jekyll` that will run the jekyll inside
+This will create PowerShell function `jekyll` that will run the Jekyll inside
 the container with any arguments you provide to the function. Basically it's
-like I had that jekyll locally. Magic!
+like I had that Jekyll locally. Magic!
 
     > jekyll new myblog
     New jekyll site installed in /srv/jekyll/myblog.
@@ -150,10 +150,10 @@ Great! Now just run `jekyll serve` and go to the browser.
 ### Problem with auto refresh
 
 Jekyll's `serve` command should automatically refresh your
-site whenevere there is change made to any of your files,
+site whenever there is change made to any of your files,
 so you can just refresh browser and review your changes immediately.
 
-Well, it stompted me two times:
+Well, it stomped me two times:
 
 1. It didn't refresh by itself because of Docker/Windows issue. Fixed that.
 1. It didn't refresh for `_config.yml`. Didn't fixed that, it works this way,
@@ -161,7 +161,7 @@ you have to live with that and restart after each change to config file. No prob
 if you know it.  
 
 As for the first issue it is document on
-[Running jekyll in docker](https://github.com/jekyll/docker/wiki/Usage:-Running)
+[Running Jekyll in Docker](https://github.com/jekyll/docker/wiki/Usage:-Running)
 wiki page. Files are on Windows, container runs in Linux VM and can't
 be notified of NTFS files changes properly, so you have to resort to
 polling for changes. Jekyll support's that and the easiest way for me
