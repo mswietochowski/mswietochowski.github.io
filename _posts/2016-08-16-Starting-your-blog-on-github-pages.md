@@ -5,7 +5,7 @@ comments: true
 ---
 
 If you're a developer and you think about starting a blog, think no more.
-DO IT! I recommend you to go the same way I did and friends of mine did too.
+**DO IT!** I recommend you to go the same way I did and friends of mine did too.
 Start with github pages. In this article I'll show you how did I start and
 how does this relate to my previous entry on running a Jekyll with Docker.
 
@@ -65,9 +65,10 @@ allowed to change, more info
 [here](https://help.github.com/articles/configuring-jekyll/).
 
 It's probably best if you could run the same or similar setup on your
-machine. If you've followed my previous article, then it's as simple
-as changing to different Docker image. I have set up another alias in my
-PowerShell startup script that looks like this:
+machine. If you've followed my 
+[previous article](/2016/07/31/Setting-up-jekyll-locally-with-docker.html),
+then it's as simple as changing to different Docker image. I have set up
+another alias in my PowerShell startup script that looks like this:
 
 {% highlight powershell %}
 
@@ -120,6 +121,6 @@ in my article bodies as the separator. Works reliably.
 
 ## Final words
 
-DO IT! No, really, if you were ever thinking about it, then do it now.
+**DO IT!** No, really, if you were ever thinking about it, then **do it now**.
 It should take you 30 minutes. Even if you don't want to publish now,
 just experience how easy it is and feel empowered.
