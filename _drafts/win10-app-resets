@@ -1,0 +1,18 @@
+http://screencast.com/t/3XiREn1cPyo
+
+https://social.technet.microsoft.com/Forums/en-US/2dc8c9e0-324d-422d-ba0d-fac5d5c4aee0/an-app-default-was-reset?forum=win10itprogeneral
+
+Then from a command line I ran:
+regedit.exe /s w10_stop_reset-fileasso.reg  which is the edit script from the web site recommended by others. for fixing this problem.
+
+No change.  I've rebooted, and no change.  Still get six notifications after reboot.  Still get endless hundreds of notifications if I rename a .txt fileon my desktop to .html.  All of the notifications are about HTML.  No other file associations seem to be affected.
+
+Walt
+Walt,
+
+The fix worked 100% for all others who applied it and you can check that in Answers forums or in the post comments. regedit.exe /s would have suppressed any errors if it encountered any. Can you re-run without "/s" param. I think the registry settings weren't applied correctly.
+
+Addendum:
+
+For example if there is a typo in the file name (that means passing a non-existent file as the parameter), regedit.exe "/s" wouldn't notify you.
+
